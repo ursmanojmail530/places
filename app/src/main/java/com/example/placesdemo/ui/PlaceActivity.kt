@@ -177,8 +177,8 @@ class PlaceActivity : AppCompatActivity() {
     private fun geocodePlaceAndDisplay(lat: Double, lng: Double, radius: Long, keyword: String) {
         pb1?.visibility = View.VISIBLE
         val apiKey = getString(R.string.key)
-        val lat1 = -33.8670522
-        val lng1 = 151.1957362
+        val lat1 = lat
+        val lng1 = lng
         val requestURL =
                 "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=$lat1,$lng1&radius=$radius&keyword=$keyword&key=$apiKey"
         val request = JsonObjectRequest(Request.Method.GET, requestURL, null, { response ->
